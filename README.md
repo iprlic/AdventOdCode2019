@@ -1,2 +1,2 @@
-# AdventOdCode2019
+# AdventOfCode2019
 Advent of code 2019 solutions
