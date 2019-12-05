@@ -14,7 +14,7 @@ pos = 0
 loop do
   if intcode[pos] == 1
     intcode[intcode[pos + 3]] = intcode[intcode[pos + 1]] + intcode[intcode[pos + 2]]
-  elsif intcode[pos] == 2   
+  elsif intcode[pos] == 2
     intcode[intcode[pos + 3]] = intcode[intcode[pos + 1]] * intcode[intcode[pos + 2]]
   else
     puts intcode[0]
