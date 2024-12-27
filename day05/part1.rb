@@ -21,7 +21,7 @@ move = 2
 loop do
   cmd = command(intcode[pos])
 
-  puts "#{cmd.type}: #{cmd.args}, #{intcode[pos]}, #{pos}"
+
   case cmd.type
   when 1
     arg1 = cmd.args[0].zero? ? intcode[intcode[pos + 1]] : intcode[pos + 1]
@@ -40,10 +40,9 @@ loop do
     move = 2
   when 4
     arg1 = cmd.args[0].zero? ? intcode[intcode[pos + 1]] : intcode[pos + 1]
-    puts arg1
+    puts arg1 if arg1 != 0
     move = 2
   else
-    puts "Unknown intcode #{cmd.type}"
     break
   end
 

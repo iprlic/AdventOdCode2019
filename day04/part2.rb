@@ -20,8 +20,8 @@ def valid_password?(num)
   add
 end
 
-min = 240_920
-max = 789_857
+min = 284_639
+max = 748_759
 
 cnt = (min..max).inject(0) { |sum, n| sum += valid_password?(n) }
 

@@ -9,7 +9,7 @@ input = File.read(file_path).split("\n").map(&:chars)
 
 coords = input.map.with_index do |e, i|
   e.map.with_index do |f, j|
-    { 'x' => j - 20, 'y' => 19 - i } if f == '#' # placing the station to center
+    { 'x' => j - 25, 'y' => 31 - i } if f == '#' # placing the station to center
   end.compact
 end.compact.flatten
 
@@ -39,7 +39,7 @@ loop do
     next if a.nil?
     cnt += 1
     if cnt == 200
-      puts ((a['x'] + 20) * 100) + (19 - a['y'])
+      puts ((a['x'] + 25) * 100) + (31 - a['y'])
       exit
     end
   end
